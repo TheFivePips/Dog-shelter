@@ -51,7 +51,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/" element={<Home dogs={this.props.dogs} />}></Route>
           <Route exact path="/dog" element={<h1>Dog</h1>}></Route>
           <Route path="*" element={<h1>Not Found</h1>}></Route>
         </Routes>
