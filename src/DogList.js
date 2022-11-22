@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './Home.css'
+import './DogList.css'
 
 
-class Home extends Component {
+class DogList extends Component {
     render() {
         return (
-          <div className="Home">
+          <div className="DogList">
             <h1 className="display-1 text-center">Dog List</h1>
             <div className="container">
               <div className="row">
@@ -22,4 +22,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default DogList;

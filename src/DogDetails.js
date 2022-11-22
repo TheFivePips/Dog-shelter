@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from "react"
 
-class DogDetails extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
+const DogDetails = ({ dog }) => {
+
+    return(
+        <div>
+
+            <h1>{dog.name}</h1>
+            <h1>{dog.age}</h1>
+            <h1>{dog.facts}</h1>
+        </div>
+    )
 }
 
-export default DogDetails;
-
-// this is where I left off on this project at 4. adding the dogDetails componenet
+export default DogDetails
