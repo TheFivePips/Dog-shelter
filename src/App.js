@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.css'
-import { Routes, Route} from "react-router-dom"
-import DogList from './DogList';
 import Navbar from './Navbar';
-import DogDetailsWrapper from './DogDetailsWrapper';
-// import dogs from './Data';
+
 import daisy from "./images/daisy.jpg";
 import hazel from "./images/hazel.jpg";
 import tubby from "./images/tubby.jpg";
+import Router from './Router';
 
 
 
@@ -51,23 +49,17 @@ class App extends Component {
       },
     ],
   };
-
-  
-  
+ 
   render() {
 
     const { dogs } = this.props
 
-    
-
     return (
       <div className="App">
-        <Navbar />
-        <Routes>
-          <Route exact path="/dogs" element={<DogList dogs={dogs} />}></Route>
-          <Route exact path="/dogs/:name" element={<DogDetailsWrapper dogs={dogs} />}></Route>
-          <Route path="/*" element={<h1>Not Found</h1>}></Route>
-        </Routes>
+        <Navbar dogs={dogs}/>
+        <div className='container'>
+          <Router dogs={dogs}/>
+        </div>
       </div>
     );
   }
@@ -75,3 +67,4 @@ class App extends Component {
 
 export default App;
 
+ 
